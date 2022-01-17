@@ -216,7 +216,7 @@ void *thread_func(void *data)
             if (rc == PLCTAG_STATUS_PENDING)
             {
                 WaitForSingleObject(hEvent, -1);
-                if ((rc = plc_tag_status(tag) == PLCTAG_STATUS_PENDING))
+                if ((rc = plc_tag_status(tag)) == PLCTAG_STATUS_PENDING)
                 {
                     fprintf(stderr, "something is wrong for tag(%d), status(%d)\n", tag, rc);
                     plc_tag_destroy(tag);
