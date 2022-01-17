@@ -499,6 +499,7 @@ elseif (BUILD_EXAMPLES)
                             write_string
                             tag_rw
                             tag_rw2
+                            callback_bug
                             )
 
         set ( example_PROG_UTIL utils_windows.c)
